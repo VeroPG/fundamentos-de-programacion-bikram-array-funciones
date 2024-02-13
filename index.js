@@ -7,4 +7,44 @@ let arrayBidimensional = [
 ];
 
 let suma = (a, b) => a + b;
-let potenciacion = (a, b) => a ** b;
+
+const potenciacion= (a, b)=>{
+  if (b === 0) {
+    return 1;
+  } else if (b === 1) {
+    return a
+  }else if (b > 1) {
+    let resultado = 1;
+    for (let i = 0; i < b; i++) {
+        resultado *= a;
+    }
+    return resultado;
+  }
+}
+
+const separarPalabras = (texto) => {
+  return texto.split(" ");
+  
+}
+
+const repetirString = (texto, num) => {
+  let resultado = '';
+  for (i = 0; i < num; i++){
+      resultado += texto;
+    } 
+    return resultado;
+  }  
+  
+
+const esPrimo = (num) => {
+  if (num < 1) {
+      return "no es un numero válido"
+  }
+  else if ((num % 1 === 0 && num % num === 0)) {
+    return "no es un numero válido"  
+  } else
+    return "no es primo"
+  
+  }
+  
+
